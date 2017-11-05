@@ -17,3 +17,4 @@ node_modules
 test/unit/coverage
 
 /test
+/.idea
