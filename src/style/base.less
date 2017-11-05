@@ -1,0 +1,47 @@
+@charset "UTF-8";
+@import "mixin";
+
+body,
+html {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 52px;
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+.content_full {
+  bottom: 0;
+  z-index: 100;
+  background: #fff;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.part {
+  width: 100%;
+  height: 12px;
+  background: @base_ground;
+}
+
+.hidden_delay{
+  transition: all .2s ease;
+  opacity: 0;
+}
+.loading_content_wapper.in {
+  z-index: 80;
+}

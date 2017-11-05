@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="format-detection" content="telphone=no, email=no">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Cool Picture</title>
+  <style>
+    .loading_content_wapper {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      z-index: 500;
+    }
+
+    .loading_content {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      top: 50%;
+      left: 50%;
+      margin-top: -100px;
+      margin-left: -60px;
+    }
+
+    #svg_loading_content {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -webkit-transform-origin: 50% 55%;
+      transform-origin: 50% 55%;
+      -webkit-animation: rou 3s ease infinite;
+      animation: rou 3s ease infinite;
+    }
+
+    #XMLID_7_ {
+      -webkit-transform: translate(-18px, 0);
+      transform: translate(-18px, 0);
+      fill: #FF3E5F;
+      -webkit-animation: cc_al 0.8s ease-in-out 0.1s alternate infinite;
+      animation: cc_al 0.8s ease-in-out 0.1s alternate infinite;
+    }
+
+    #XMLID_8_ {
+      -webkit-transform: translate(18px, 0);
+      transform: translate(18px, 0);
+      fill: #FF3E5F;
+      -webkit-animation: cc_ar 0.8s ease-in-out 0s alternate infinite;
+      animation: cc_ar 0.8s ease-in-out 0s alternate infinite;
+    }
+
+    #XMLID_9_ {
+      -webkit-transform: translate(-18px, 0);
+      transform: translate(-18px, 0);
+      fill: #FF3E5F;
+      -webkit-animation: cc_al 0.8s ease-in-out 0.1s alternate infinite;
+      animation: cc_al 0.8s ease-in-out 0.1s alternate infinite;
+    }
+
+    #XMLID_10_ {
+      -webkit-transform: translate(-18px, 0);
+      transform: translate(-18px, 0);
+      fill: #FF3E5F;
+      -webkit-animation: cc_al 0.8s ease-in-out 0.1s alternate infinite;
+      animation: cc_al 0.8s ease-in-out 0.1s alternate infinite;
+    }
+
+    #XMLID_11_ {
+      -webkit-transform: translate(18px, 0);
+      transform: translate(18px, 0);
+      fill: #FF3E5F;
+      -webkit-animation: cc_ar 0.8s ease-in-out 0s alternate infinite;
+      animation: cc_ar 0.8s ease-in-out 0s alternate infinite;
+    }
+
+    #XMLID_1_ {
+      fill: none;
+      stroke: #FF3E5F;
+      stroke-width: 3;
+      stroke-miterlimit: 10;
+      stroke-dasharray: 20;
+      stroke-dashoffset: 200;
+      -webkit-animation: offset 1.6s ease infinite;
+      animation: offset 1.6s ease infinite;
+    }
+
+    @-webkit-keyframes cc_al {
+      to {
+        -webkit-transform: translate(18px, 0);
+        transform: translate(18px, 0);
+      }
+    }
+
+    @keyframes cc_al {
+      to {
+        -webkit-transform: translate(18px, 0);
+        transform: translate(18px, 0);
+      }
+    }
+
+    @-webkit-keyframes cc_ar {
+      to {
+        -webkit-transform: translate(-18px, 0);
+        transform: translate(-18px, 0);
+      }
+    }
+
+    @keyframes cc_ar {
+      to {
+        -webkit-transform: translate(-18px, 0);
+        transform: translate(-18px, 0);
+      }
+    }
+
+    @-webkit-keyframes offset {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes offset {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @-webkit-keyframes rou {
+      0% {
+        -webkit-transform: rotate(-45deg) scale(1.2);
+        transform: rotate(-45deg) scale(1.2);
+      }
+      15% {
+        -webkit-transform: rotate(-45deg) scale(1);
+        transform: rotate(-45deg) scale(1);
+      }
+      60% {
+        -webkit-transform: rotate(-45deg) scale(1);
+        transform: rotate(-45deg) scale(1);
+      }
+      100% {
+        -webkit-transform: rotate(675deg) scale(1.2);
+        transform: rotate(675deg) scale(1.2);
+      }
+    }
+
+    @keyframes rou {
+      0% {
+        -webkit-transform: rotate(-45deg) scale(1.2);
+        transform: rotate(-45deg) scale(1.2);
+      }
+      15% {
+        -webkit-transform: rotate(-45deg) scale(1);
+        transform: rotate(-45deg) scale(1);
+      }
+      60% {
+        -webkit-transform: rotate(-45deg) scale(1);
+        transform: rotate(-45deg) scale(1);
+      }
+      100% {
+        -webkit-transform: rotate(675deg) scale(1.2);
+        transform: rotate(675deg) scale(1.2);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loading_content_wapper">
+    <div class="loading_content">
+      <svg version="1.1" id="svg_loading_content" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      	 viewBox="-143 74 80 80" style="enable-background:new -143 74 80 80;" xml:space="preserve">
+        <polygon id="XMLID_7_" class="st0" points="-102.6,98.1 -108.3,108 -96.8,108 "/>
+        <polygon id="XMLID_8_" class="st0" points="-119.4,127 -85.7,127 -89.4,120 -115.7,120 "/>
+        <polygon id="XMLID_9_" class="st0" points="-123,132 -82.1,132 -85.7,127 -119.4,127 "/>
+        <polygon id="XMLID_10_" class="st0" points="-112,114 -115.7,120 -89.4,120 -93.1,114 "/>
+        <polygon id="XMLID_11_" class="st0" points="-96.8,108 -108.3,108 -112,114 -93.1,114 "/>
+        <polygon id="XMLID_1_" class="st1" points="-88.5,113.7 -75.9,135.5 -129.3,135.5 -102.6,89.3 "/>
+      </svg>
+    </div>
+  </div>
+  <div id="app-box"></div>
+  <%=htmlWebpackPlugin.files.webpackManifest%>
+</body>
+
+</html>
