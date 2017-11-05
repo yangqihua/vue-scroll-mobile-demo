@@ -1,20 +1,17 @@
 <template>
   <div id="app">
     <transition name="move">
-      <keep-alive :exclude="/.+Detail/">
-        <router-view class="content"></router-view>
+      <keep-alive :include="/\//">
+        <router-view></router-view>
       </keep-alive>
     </transition>
-    <v-nav></v-nav>
   </div>
 </template>
 
 <script>
-import vNav from './components/Nav.vue'
 
 export default {
   name: 'app',
-  components: { vNav }
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="cc_panel_wapper">
     <div class="cc_panel_detail" v-for="(item, index) in list" :key="index">
-      <div class="cc_panel_detail_image_wapper" @click.prevent.stop="jmp(item.link)">
+      <div class="cc_panel_detail_image_wapper">
         <img
           v-lazy="item.image"
           alt="预览图"
@@ -21,20 +21,15 @@
 </template>
 
 <script>
-export default {
-  props: [ 'list' ],
-  methods: {
-    jmp(link) {
-      this.$router.push(link)
-    }
+  export default {
+    props: ['list'],
   }
-}
 </script>
 
-<style lang="less">
+<style lang="less" rel="stylesheet/less">
   @import "../style/mixin.less";
 
-  .cc_panel_wapper{
+  .cc_panel_wapper {
     margin-left: -15px;
     padding: 15px;
     box-sizing: border-box;
@@ -44,7 +39,7 @@ export default {
       clear: both;
     }
 
-    .cc_panel_detail{
+    .cc_panel_detail {
       position: relative;
       width: 50%;
       overflow: hidden;
@@ -53,7 +48,6 @@ export default {
       padding-left: 15px;
       padding-bottom: 15px;
       box-sizing: border-box;
-
       &_image_wapper {
         position: relative;
         margin-bottom: 5px;

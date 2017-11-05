@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
+import Home from '../pages/Home'
+import Vux from '../pages/details/Vux'
+
+
+// import Home from '@/components/Home'
 import Works from '@/components/Works'
 import WorkDetail from '@/components/WorkDetail'
 import Articles from '@/components/Articles'
@@ -17,6 +21,13 @@ export default new Router({
       name: 'Home',
       component: Home
     },
+    {
+      path: '/vux',
+      name: 'Vux',
+      component: Vux
+    },
+
+
     {
       path: '/works',
       name: 'Works',

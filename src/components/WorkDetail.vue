@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import { jsonp, $dom, workInfor, workShow, getUserInfoMin, showloadin, hideloadin } from '../mixin/util'
-import { io_detail } from '../mixin/url'
+import { jsonp, $dom, workInfor, workShow, getUserInfoMin, showloadin, hideloadin } from '../utils/util'
+import { io_detail } from '../utils/url'
 import UserInfoMin from './UserInfoMin.vue'
 
 export default {

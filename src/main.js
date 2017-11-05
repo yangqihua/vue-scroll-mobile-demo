@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import FastClick from 'fastclick'
 import VueLazyload from 'vue-lazyload'
-import Total from './mixin/total'
+import Total from './utils/total'
 import App from './App'
 import router from './router'
 import store from './store'
@@ -22,4 +22,3 @@ new Vue({
   render: h => h(App)
 }).$mount('#app-box')
 
-store.dispatch('getData')

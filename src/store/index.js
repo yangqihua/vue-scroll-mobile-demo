@@ -12,18 +12,18 @@ import {
   upBox,
   showloadin,
   hideloadin
-} from '../mixin/util'
+} from '../utils/util'
 
 import {
   io_base,
   io_home_list,
   io_works,
   io_articles
-} from '../mixin/url'
+} from '../utils/url'
 
 
 const state = {
-  base_data: {},
+  base_data: {list:[]},
   works_data: [],
   articles_data: {}
 }
@@ -55,20 +55,6 @@ const actions = {
       commit('GET_DATA', { list: state.base_data.list.concat(homelist($))})
     })
   },
-  getWorks({ commit }, sel = {}) {
-    NProgress.set(0.4)
-    ajax(io_works, sel).then(res => $dom(res.body)).then($ => {
-      NProgress.done()
-      commit('GET_WORKS', homelist($))
-    })
-  },
-  getArticles({ commit }, sel = {}) {
-    NProgress.start()
-    ajax(io_articles, sel).then(res => $dom(res.body)).then($ => {
-      NProgress.done()
-      commit('GET_ARTICLES', upBox($))
-    })
-  }
 }
 
 export default new Vuex.Store({
