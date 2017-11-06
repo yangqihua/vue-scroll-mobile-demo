@@ -6,6 +6,7 @@ import BetterScroll from '../pages/details/BetterScroll'
 import MeScroll from '../pages/details/MeScroll'
 import VueInfiniteScroll from '../pages/details/VueInfiniteScroll'
 import VueScroll from '../pages/details/VueScroll'
+import VueRecyclist from '../pages/details/VueRecyclist'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/vue-scroll',
       name: 'VueScroll',
       component: VueScroll
+    },
+    {
+      path: '/vue-recyclist',
+      name: 'VueRecyclist',
+      component: VueRecyclist
     },
 
 
