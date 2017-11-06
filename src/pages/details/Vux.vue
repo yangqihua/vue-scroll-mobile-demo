@@ -70,7 +70,6 @@
     	this.pullup();
     },
     activated () {
-    	console.log("activated:");
       this.$refs.scroller.reset()
     },
   }

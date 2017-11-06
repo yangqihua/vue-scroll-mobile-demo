@@ -18,6 +18,7 @@
     "mescroll.js": "^1.2.3",
     "nprogress": "^0.2.0",
     "vue": "^2.2.2",
+    "vue-infinite-scroll": "^2.0.2",
     "vue-lazyload": "^1.0.3",
     "vue-router": "^2.2.0",
     "vuex": "^2.1.1",

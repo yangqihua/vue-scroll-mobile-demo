@@ -92,7 +92,7 @@
     destroyed(){
     	// 解决mescroll 返回到顶端的bug
     	let toTopDom = document.getElementsByClassName('mescroll-totop');
-    	if(toTopDom){
+    	if(toTopDom.length>0){
     		document.body.removeChild(toTopDom[0]);
       }
     }
@@ -101,5 +101,4 @@
 
 <style lang="less" rel="stylesheet/less">
   @import '../../../node_modules/mescroll.js/mescroll.min.css';
-
 </style>

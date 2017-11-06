@@ -4,6 +4,7 @@ import Home from '../pages/Home'
 import Vux from '../pages/details/Vux'
 import BetterScroll from '../pages/details/BetterScroll'
 import MeScroll from '../pages/details/MeScroll'
+import VueInfiniteScroll from '../pages/details/VueInfiniteScroll'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/mescroll',
       name: 'MeScroll',
       component: MeScroll
+    },
+    {
+      path: '/vue-infinite-scroll',
+      name: 'VueInfiniteScroll',
+      component: VueInfiniteScroll
     },
 
 
