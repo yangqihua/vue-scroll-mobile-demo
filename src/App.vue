@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <transition name="move">
-      <keep-alive :include="/\//">
+      <keep-alive>
         <router-view></router-view>
       </keep-alive>
     </transition>

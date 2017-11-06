@@ -9,16 +9,11 @@ import {
   $dom,
   homelist,
   showbox,
-  upBox,
-  showloadin,
-  hideloadin
 } from '../utils/util'
 
 import {
   io_base,
   io_home_list,
-  io_works,
-  io_articles
 } from '../utils/url'
 
 

@@ -36,19 +36,6 @@ export function jsonp(url, data = {}) {
   })
 }
 
-// 显示隐藏 loading
-const loadin = document.querySelector('.loading_content_wapper')
-export const showloadin = (z) => {
-  z && loadin.classList.add('in')
-  loadin.classList.remove('hidden_delay')
-  loadin.style.display = 'block'
-}
-export const hideloadin = () => {
-  loadin.classList.remove('in')
-  loadin.classList.add('hidden_delay')
-  setTimeout(() => loadin.style.display = 'none', 220)
-}
-
 // DOM 解析
 const Dom = function (data) {
   var el = document.createElement('div')
@@ -97,52 +84,3 @@ export function showbox($) {
   return list
 }
 
-export function workContent($) {
-  return $('.workContent')[0].innerHTML
-}
-
-export function workInfor($) {
-  return $('.workInfor')[0].innerHTML
-}
-
-export function workShow($) {
-  let play = $('#letv-player')[0]
-  play && play.parentNode.removeChild(play)
-  let show = $('.workShow ul')[0]
-  Array.prototype.forEach.call($('.workShow ul li a'), el => {
-    let hr = el.getAttribute('href').replace(/\/img.html#src=/,'')
-    el.setAttribute('href', hr)
-  })
-
-  return show.innerHTML
-}
-
-export function getUserInfoMin($) {
-	let bar = $('.workTopBar')[0]
-	return {
-		title: bar.querySelector('.workTitle').innerHTML,
-    userName: bar.querySelector('.userName a').innerHTML,
-    more: bar.querySelector('.userInforCon p').innerHTML
-	}
-}
-
-export function upBox($) {
-  let list = []
-  Array.prototype.forEach.call($('.upJyBox ul li'), el => {
-    let href = el.querySelector('a').getAttribute('href')
-
-    list.push({
-      title: el.querySelector('.ujTitle a').textContent,
-      link: href.replace(/(http:\/\/old.zcool.com.cn)|(\.html)/g,''),
-      image: el.querySelector('img').getAttribute('src'),
-      desc: el.querySelectorAll('.blackLink p')[1].textContent,
-      update: (el.querySelector('.blackLink p').innerHTML).match(/<br>(.*?)\s\//)[1] || '',
-      reqi: el.querySelectorAll('.blackLink p .cf30')[0].textContent || '',
-      pinglun: el.querySelectorAll('.blackLink p .cf30')[1].textContent || '',
-      tuijian: el.querySelectorAll('.blackLink p .cf30')[2].textContent || '',
-      username: el.querySelector('.upJyBoxCon .vm a').innerHTML,
-      userhead: el.querySelector('.upJyBoxCon .vm img').getAttribute('src')
-    })
-  })
-  return list
-}
