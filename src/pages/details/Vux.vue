@@ -13,7 +13,7 @@
                 height="-100"
                 ref="scroller">
         <div class="content_photo">
-          <c-panel :list="data.list"/>
+          <c-panel :list="list"/>
         </div>
         <div slot="pullup" class="xs-plugin-pullup-container xs-plugin-pullup-up">
           <span class="pullup-arrow iconfont" v-show="status.pullupStatus !== 'loading'"
@@ -58,12 +58,12 @@
       }
     },
     computed: {
-      data() {
+      list() {
         this.$nextTick(() => {
           this.status.pullupStatus = 'default'
           this.$refs.scroller.reset()
         })
-        return this.$store.state.base_data
+        return this.$store.state.base_data.list
       }
     },
     created(){

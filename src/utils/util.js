@@ -74,13 +74,3 @@ export function homelist($) {
   return list
 }
 
-export function showbox($) {
-  let list = []
-  Array.prototype.forEach.call($('.indexShowBox li img'), el => {
-    list.push({
-      image: el.getAttribute('src')
-    })
-  })
-  return list
-}
-
