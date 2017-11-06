@@ -22,9 +22,9 @@
           {title:'Vux','link':'/vux'},
           {title:'Better-scroll','link':'/better-scroll'},
           {title:'MeScroll','link':'/mescroll'},
-          {title:'Vue-infinite-scroll','link':'/vue-infinite-scroll'},
           {title:'Vue Scroll','link':'/vue-scroll'},
           {title:'Vue-recyclist','link':'/vue-recyclist'},
+          {title:'Vue-infinite-scroll','link':'/vue-infinite-scroll'},
         ],
       }
     },
