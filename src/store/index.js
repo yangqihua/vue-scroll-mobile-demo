@@ -24,6 +24,9 @@ const mutations = {
   GET_DATA(state, payload) {
     state.base_data = Object.assign({}, state.base_data, payload)
   },
+  SET_EMPTY_DATA(state, payload) {
+    state.base_data.list = [];
+  },
 }
 
 const actions = {
@@ -43,6 +46,9 @@ const actions = {
       ecb&&ecb(err);
     })
   },
+  setDataEmpty({ commit, state }) {
+    commit('SET_EMPTY_DATA');
+  }
 }
 
 export default new Vuex.Store({
