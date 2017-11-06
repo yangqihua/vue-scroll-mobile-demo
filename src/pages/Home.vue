@@ -31,7 +31,6 @@
       }
     },
     mounted(){
-    	console.log('mounted');
       this.$store.dispatch('setDataEmpty')
     }
   }

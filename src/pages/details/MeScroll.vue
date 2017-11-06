@@ -19,6 +19,7 @@
   import cPanel from '../../components/Panel'
   import MeScroll from 'MeScroll.js'
   import totop from '../../assets/mescroll/mescroll-totop.png'
+  import empty from '../../assets/mescroll/mescroll-empty.png'
   //创建vue对象
   export default {
     components: {
@@ -34,7 +35,6 @@
         webLink: 'https://vux.li/',
 
         mescroll: null,
-        pdlist: []
       }
     },
     mounted() {
@@ -52,15 +52,15 @@
             offset : 1000
           },
           empty: { //配置列表无任何数据的提示
-            warpId: "dataList",
-            icon: "../../../assets/mescroll-empty.png",
+            warpId: "mescroll",
+            icon: empty,
             tip: "亲,暂无相关数据哦~",
             btntext: "去逛逛 >",
             btnClick: function () {
               alert("点击了去逛逛按钮");
             }
           },
-          htmlNodata: '<p class="upwarp-nodata">-- 暂无更多数据 --</p>',
+          htmlNodata: '<p class="upwarp-nodata">-- 暂无更多数据哦~ --</p>',
           scrollbar: {use: true, barClass: "mescroll-bar"}
 
         }
@@ -73,6 +73,7 @@
       	let params = {
       		page:page.num,
           scb:(curPageData)=>{
+//            curPageData = [];  //打开本行注释,可演示列表无任何数据empty的配置
             self.mescroll.endSuccess(curPageData.length);
           },
           ecb:(err)=>{
@@ -88,6 +89,13 @@
         return this.$store.state.base_data.list
       }
     },
+    destroyed(){
+    	// 解决mescroll 返回到顶端的bug
+    	let toTopDom = document.getElementsByClassName('mescroll-totop');
+    	if(toTopDom){
+    		document.body.removeChild(toTopDom[0]);
+      }
+    }
   };
 </script>
 
