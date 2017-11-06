@@ -15,6 +15,7 @@
     "better-scroll": "^1.4.0",
     "es6-promise": "^4.1.0",
     "fastclick": "^1.0.6",
+    "mescroll.js": "^1.2.3",
     "nprogress": "^0.2.0",
     "vue": "^2.2.2",
     "vue-lazyload": "^1.0.3",

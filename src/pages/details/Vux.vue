@@ -13,7 +13,7 @@
                 height="-100"
                 ref="scroller">
         <div class="content_photo">
-          <c-panel :list="list"/>
+          <c-panel :list="list"></c-panel>
         </div>
         <div slot="pullup" class="xs-plugin-pullup-container xs-plugin-pullup-up">
           <span class="pullup-arrow iconfont" v-show="status.pullupStatus !== 'loading'"
@@ -54,7 +54,7 @@
     },
     methods: {
       pullup() {
-        this.$store.dispatch('getListBy', ++this.page)
+        this.$store.dispatch('getListBy', {page:++this.page})
       }
     },
     computed: {

@@ -19,8 +19,9 @@
     data () {
       return {
       	demoList:[
-          {title:'vux','link':'/vux'},
-          {title:'better-scroll','link':'/better-scroll'},
+          {title:'Vux','link':'/vux'},
+          {title:'Better-scroll','link':'/better-scroll'},
+          {title:'MeScroll','link':'/mescroll'},
         ],
       }
     },

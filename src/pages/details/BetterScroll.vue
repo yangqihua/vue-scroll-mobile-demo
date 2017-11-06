@@ -46,7 +46,7 @@
     methods: {
       onPullingUp() {
         // 更新数据
-        this.$store.dispatch('getListBy', ++this.page)
+        this.$store.dispatch('getListBy', {page:++this.page})
       },
     },
     computed: {

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '../pages/Home'
 import Vux from '../pages/details/Vux'
 import BetterScroll from '../pages/details/BetterScroll'
+import MeScroll from '../pages/details/MeScroll'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/better-scroll',
       name: 'BetterScroll',
       component: BetterScroll
+    },
+    {
+      path: '/mescroll',
+      name: 'MeScroll',
+      component: MeScroll
     },
 
 
