@@ -13,6 +13,11 @@ require('es6-promise').polyfill()
 
 Vue.use(VueLazyload)
 FastClick.attach(document.body)
+
+// 仅仅只是VueScroller需要全局注册
+import VueScroller from 'vue-scroller'
+Vue.use(VueScroller)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
