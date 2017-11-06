@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0ce06e-02d8-4846-8cb2-2f144299b8a4" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/mixin/total.js" afterPath="$PROJECT_DIR$/src/utils/total.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/mixin/url.js" afterPath="$PROJECT_DIR$/src/utils/url.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/mixin/util.js" afterPath="$PROJECT_DIR$/src/utils/util.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.vue" afterPath="$PROJECT_DIR$/src/App.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ArticleDetail.vue" afterPath="$PROJECT_DIR$/src/components/ArticleDetail.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Panel.vue" afterPath="$PROJECT_DIR$/src/components/Panel.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/WorkDetail.vue" afterPath="$PROJECT_DIR$/src/components/WorkDetail.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/index.js" afterPath="$PROJECT_DIR$/src/router/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/index.js" afterPath="$PROJECT_DIR$/src/store/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/base.less" afterPath="$PROJECT_DIR$/src/style/base.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl.html" afterPath="$PROJECT_DIR$/tpl.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -84,8 +71,8 @@
           <file leaf-file-name="Details.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/Details.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="675">
-                  <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+                <state relative-caret-position="510">
+                  <caret line="58" column="7" lean-forward="true" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
@@ -107,7 +94,7 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Home.vue" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Home.vue" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/Home.vue">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1080">
@@ -119,10 +106,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Panel.vue" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Panel.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/Panel.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
+                <state relative-caret-position="525">
                   <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
                   <folding />
                 </state>
@@ -135,8 +122,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>content_photo</find>
       <find>concat</find>
+      <find>content_photo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -468,7 +455,7 @@
       <option name="presentableId" value="Default" />
       <updated>1509896603472</updated>
       <workItem from="1509896605216" duration="441000" />
-      <workItem from="1509897394770" duration="7760000" />
+      <workItem from="1509897394770" duration="8240000" />
     </task>
     <task id="LOCAL-00001" summary="update .gitignore">
       <created>1509897521830</created>
@@ -484,11 +471,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509897566349</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="完成vux的scroll">
+      <created>1509905496098</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1509905496098</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8201000" />
+    <option name="totallyTimeSpent" value="8681000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-240" y="-1080" width="1920" height="1080" extended-state="6" />
@@ -524,7 +518,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="update .gitignore" />
+    <MESSAGE value="完成vux的scroll" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成vux的scroll" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -655,14 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Panel.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Home.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
@@ -685,8 +672,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Details.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+        <state relative-caret-position="510">
+          <caret line="58" column="7" lean-forward="true" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Panel.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
           <folding />
         </state>
       </provider>
