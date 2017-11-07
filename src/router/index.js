@@ -9,6 +9,7 @@ import VueScroll from '../pages/details/VueScroll'
 import VueRecyclist from '../pages/details/VueRecyclist'
 import VueVirtualScroller from '../pages/details/VueVirtualScroller.vue'
 import VueInfiniteLoading from '../pages/details/VueInfiniteLoading.vue'
+import VueMugenScroll from '../pages/details/VueMugenScroll.vue'
 
 Vue.use(Router)
 
@@ -59,7 +60,11 @@ export default new Router({
       name: 'VueInfiniteLoading',
       component: VueInfiniteLoading
     },
-
+    {
+      path: '/vue-mugen-scroll',
+      name: 'VueMugenScroll',
+      component: VueMugenScroll
+    },
 
     {
       path: '*',

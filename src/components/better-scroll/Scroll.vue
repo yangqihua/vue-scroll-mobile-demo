@@ -162,6 +162,7 @@
         }
         if (this.listenScrollEnd) {
           this.scroll.on('scrollEnd', (pos) => {
+//          	this.scroll.scrollTo(pos.x,pos.y,0,easing);
             this.$emit('scrollEnd')
           })
         }

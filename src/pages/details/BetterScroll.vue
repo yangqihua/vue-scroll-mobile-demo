@@ -9,6 +9,7 @@
     >
       <scroll ref="scroll"
               :data="list"
+              :listenScrollEnd="true"
               :pullUpLoad="pullUpLoad"
               @pullingUp="onPullingUp">
         <c-panel :list="list"></c-panel>

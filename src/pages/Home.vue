@@ -27,6 +27,7 @@
           {title:'Vue-infinite-scroll','link':'/vue-infinite-scroll'},
           {title:'Vue-virtual-scroller','link':'/vue-virtual-scroller'},
           {title:'Vue-infinite-loading','link':'/vue-infinite-loading'},
+          {title:'Vue-mugen-scroll','link':'/vue-mugen-scroll'},
         ],
       }
     },
