@@ -145,6 +145,7 @@
           pullUpLoad: this.pullUpLoad,
           startY: this.startY,
           bounce: this.bounce,
+          //useTransform:false,
         }
 
         this.scroll = new BScroll(this.$refs.wrapper, options)

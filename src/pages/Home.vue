@@ -25,6 +25,7 @@
           {title:'Vue Scroll','link':'/vue-scroll'},
           {title:'Vue-recyclist','link':'/vue-recyclist'},
           {title:'Vue-infinite-scroll','link':'/vue-infinite-scroll'},
+          {title:'Vue-virtual-scroller','link':'/vue-virtual-scroller'},
         ],
       }
     },
