@@ -17,6 +17,8 @@
     "fastclick": "^1.0.6",
     "mescroll.js": "^1.2.3",
     "nprogress": "^0.2.0",
+    "scrollfix": "0.0.2",
+    "scrollload": "^3.2.1",
     "vue": "^2.2.2",
     "vue-infinite-loading": "^2.2.1",
     "vue-infinite-scroll": "^2.0.2",
