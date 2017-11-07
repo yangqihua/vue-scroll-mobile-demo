@@ -144,11 +144,10 @@
           scrollbar: this.scrollbar,
           pullUpLoad: this.pullUpLoad,
           startY: this.startY,
-          bounce: this.bounce,
-          //useTransform:false,
+          bounce: this.bounce
         }
 
-        this.scroll = new BScroll(this.$refs.wrapper, options)
+        this.scroll = new BScroll(this.$refs.wrapper, options);
 
         if (this.listenScroll) {
           this.scroll.on('scroll', (pos) => {
@@ -162,7 +161,7 @@
           })
         }
         if (this.listenScrollEnd) {
-          this.scroll.on('scrollEnd', () => {
+          this.scroll.on('scrollEnd', (pos) => {
             this.$emit('scrollEnd')
           })
         }

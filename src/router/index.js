@@ -8,6 +8,7 @@ import VueInfiniteScroll from '../pages/details/VueInfiniteScroll'
 import VueScroll from '../pages/details/VueScroll'
 import VueRecyclist from '../pages/details/VueRecyclist'
 import VueVirtualScroller from '../pages/details/VueVirtualScroller.vue'
+import VueInfiniteLoading from '../pages/details/VueInfiniteLoading.vue'
 
 Vue.use(Router)
 
@@ -48,10 +49,15 @@ export default new Router({
       name: 'VueRecyclist',
       component: VueRecyclist
     },
-{
+    {
       path: '/vue-virtual-scroller',
       name: 'VueVirtualScroller',
       component: VueVirtualScroller
+    },
+    {
+      path: '/vue-infinite-loading',
+      name: 'VueInfiniteLoading',
+      component: VueInfiniteLoading
     },
 
 
