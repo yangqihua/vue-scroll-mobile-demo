@@ -78,10 +78,12 @@
     left: 0;
     right: 0;
     height: 90px;
+    z-index: 9999;
+    background: #fff;
   }
 
   .detail {
-    margin: 15px;
+    /*margin: 15px;*/
     .desc {
       margin-top: 30px;
       .weui-cell__ft {
@@ -89,13 +91,7 @@
       }
     }
     .demo {
-      position: fixed;
-      top: 100px;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch
+      padding-top: 90px;
     }
   }
 </style>

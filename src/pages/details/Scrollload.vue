@@ -1,33 +1,21 @@
 <template>
-  <!--<demo-details-->
-  <!--:header="header"-->
-  <!--:introduction="introduction"-->
-  <!--:desc="desc"-->
-  <!--:gitLink="gitLink"-->
-  <!--:webLink="webLink"-->
-  <!--&gt;-->
-  <div style="">
-    <div
-      style="position:fixed;top:0;left:0;right:0;height: 40px;z-index: 9999; text-align: center;line-height: 40px;font-size: 30px;border-bottom: 1px solid #888;background: red">
-      header
-    </div>
+  <demo-details
+    :header="header"
+    :introduction="introduction"
+    :desc="desc"
+    :gitLink="gitLink"
+    :webLink="webLink"
+  >
     <div class="scrollload-container">
-      <div class="scrollload-content">
-      </div>
+      <c-panel :list="list" class="scrollload-content"></c-panel>
     </div>
-    <div
-      style="position:fixed;bottom: 0;left:0;right:0;height: 40px;z-index: 9999; text-align: center;line-height: 40px;font-size: 30px;border-bottom: 1px solid #888;background: red">
-      footer
-    </div>
-  </div>
-  <!--</demo-details>-->
+  </demo-details>
 </template>
 
 <script type="text/ecmascript-6">
   import Details from '../../components/Details.vue'
   import cPanel from '../../components/Panel'
-    import 'Scrollload'
-//  import '../../assets/scrolload/lib/Scrollload'
+  import Scrollload from  '../../assets/scrolload/Scrollload'
   //创建vue对象
   export default {
     components: {
@@ -51,39 +39,11 @@
       this.scroll = new Scrollload({
         container: document.querySelector('.scrollload-container'),
         content: document.querySelector('.scrollload-content'),
-//        window: document.querySelector('#app'),
-        loadMore: self.loadMore,
-//        useLocalScrollFix: true,
-        // 你也可以关闭下拉刷新
-        enablePullRefresh: true,
-        pullRefresh: function (sl) {
-          setTimeout(function () {
-            sl.contentDom.insertAdjacentHTML("afterBegin", "<div>new test</div>");
-            sl.refreshComplete()
-          }, 300)
-        },
+        loadMore: self.upCallback,
       })
     },
     methods: {
-      loadMore(sl) {
-        if (this.page++ === 6) {
-          // 没有数据的时候需要调用noMoreData
-          sl.noMoreData()
-          return
-        }
-        let self = this
-        setTimeout(function () {
-          for (var i = 0; i < 20; i++) {
-            sl.contentDom.insertAdjacentHTML("beforeEnd", "<div>test" + (i + (self.page - 1) * 10) + "</div>");
-          }
-          sl.unLock()
-        }, 300)
-      },
       upCallback: function (scroll) {
-//        console.log('this.page:', this.page)
-        console.log('this.scroll:', this.scroll)
-        console.log('scroll:', scroll)
-//        scroll.lock();
         let params = {
           page: ++this.page,
           scb: (curPageData) => {
@@ -104,19 +64,16 @@
       }
     },
     destroyed(){
-
+//    	console.log('this.scroll:',this.scroll);
+//      this.scroll.destroy();
+      delete this.scroll;
     }
   };
 </script>
 
 <style lang="less" rel="stylesheet/less">
   .scrollload-container {
-    padding-top: 40px;
-    padding-bottom: 40px;
     .scrollload-content {
-      font-size: 30px;
-      line-height: 40px;
-      text-align: center;
     }
   }
 </style>

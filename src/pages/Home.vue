@@ -39,6 +39,7 @@
     },
     mounted(){
       this.$store.dispatch('setDataEmpty')
+
     }
   }
 </script>
