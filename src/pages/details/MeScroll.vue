@@ -39,6 +39,7 @@
       	let params = {
       		page:page.num,
           scb:(curPageData)=>{
+      			console.log('sss')
             self.$refs.mescroll.endSuccess(curPageData.length);
           },
           ecb:(err)=>{

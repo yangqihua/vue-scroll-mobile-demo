@@ -64,16 +64,10 @@
       }
     },
     destroyed(){
-//    	console.log('this.scroll:',this.scroll);
-//      this.scroll.destroy();
-      delete this.scroll;
+      this.scroll.destroy();
     }
   };
 </script>
 
 <style lang="less" rel="stylesheet/less">
-  .scrollload-container {
-    .scrollload-content {
-    }
-  }
 </style>

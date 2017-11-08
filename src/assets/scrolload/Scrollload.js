@@ -123,7 +123,6 @@ export default class Scrollload {
   }
 
   destroy(){
-    console.log('this',this)
     let self = this
     if (this._options.enableLoadMore) {
       this.detachScrollListener();
