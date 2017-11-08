@@ -144,7 +144,8 @@
           scrollbar: this.scrollbar,
           pullUpLoad: this.pullUpLoad,
           startY: this.startY,
-          bounce: this.bounce
+          bounce: this.bounce,
+          useTransition:true,
         }
 
         this.scroll = new BScroll(this.$refs.wrapper, options);

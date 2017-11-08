@@ -27,9 +27,9 @@
     },
     data() {
       return {
-        header: 'MeScroll',
-        introduction: '这里是关于MeScroll插件的相关内容介绍',
-        desc: '这里是关于MeScroll插件的相关内容说明',
+        header: 'VueMugenScroll',
+        introduction: '这里是关于VueMugenScroll插件的相关内容介绍',
+        desc: '这里是关于VueMugenScroll插件的相关内容说明',
         gitLink: 'https://github.com/airyland/vux',
         webLink: 'https://vux.li/',
 

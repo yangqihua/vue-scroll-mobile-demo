@@ -1,11 +1,13 @@
 <template>
   <div>
-    <x-header>{{header}}</x-header>
-    <div class="detail">
-      <button-tab v-model="selectIndex">
+    <div class="headerInfo">
+      <x-header>{{header}}</x-header>
+      <button-tab v-model="selectIndex" style="margin: 15px;">
         <button-tab-item>效果演示</button-tab-item>
         <button-tab-item>插件说明</button-tab-item>
       </button-tab>
+    </div>
+    <div class="detail">
       <div class="demo" v-if="selectIndex==0">
         <slot></slot>
       </div>
@@ -24,11 +26,11 @@
 </template>
 
 <script>
-  import {XHeader, ButtonTab, ButtonTabItem,Group,Cell} from 'vux'
+  import {XHeader, ButtonTab, ButtonTabItem, Group, Cell} from 'vux'
 
   export default {
     components: {
-      XHeader, ButtonTab, ButtonTabItem,Group,Cell
+      XHeader, ButtonTab, ButtonTabItem, Group, Cell
     },
     name: 'details',
     props: {
@@ -60,7 +62,7 @@
     },
     methods: {
       clickGit(){
-      	location.href = this.gitLink;
+        location.href = this.gitLink;
       },
       clickWeb(){
         location.href = this.webLink;
@@ -70,18 +72,26 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
+  .headerInfo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+  }
+
   .detail {
     margin: 15px;
-    .desc{
+    .desc {
       margin-top: 30px;
-      .weui-cell__ft{
+      .weui-cell__ft {
         font-size: 13px;
       }
     }
-    .demo{
+    .demo {
       position: fixed;
-      top:100px;
-      bottom:0;
+      top: 100px;
+      bottom: 0;
       left: 0;
       right: 0;
       overflow-y: auto;
