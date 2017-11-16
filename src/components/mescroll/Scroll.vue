@@ -74,11 +74,7 @@
     },
     destroyed(){
       // 解决mescroll 返回到顶端的bug
-      let toTopDom = document.getElementsByClassName('mescroll-totop');
-      if (toTopDom.length > 0) {
-        document.body.removeChild(toTopDom[0]);
-      }
-      this.mescroll.destroy();
+      this.mescroll &&this.mescroll.destroy();
     }
   };
 </script>
