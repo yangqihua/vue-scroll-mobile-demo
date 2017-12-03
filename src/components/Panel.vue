@@ -3,7 +3,7 @@
     <div class="cc_panel_detail" v-for="(item, index) in list" :key="index">
       <div class="cc_panel_detail_image_wapper">
         <img
-          v-lazy="item.image"
+          v-lazy="item.img"
           alt="预览图"
           class="image"
           width="250"
@@ -12,8 +12,8 @@
       <div class="cc_panel_detail_info">
         <h4 class="title">{{item.title}}</h4>
         <span class="desc">
-          <i class="iconfont icon-icon1"></i> {{item.reqi}}
-          <i class="iconfont icon-shouye1"></i> {{item.tuijian}}
+          <i class="iconfont icon-icon1"></i> {{item.view}}
+          <i class="iconfont icon-shouye1"></i> {{item.like}}
         </span>
       </div>
     </div>

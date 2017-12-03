@@ -46,6 +46,7 @@
         gitLink: 'https://github.com/airyland/vux',
         webLink: 'https://vux.li/',
 
+        data:[],
         page: 0,
         status: {
           pullupStatus: 'default'
@@ -54,16 +55,16 @@
     },
     methods: {
       pullup() {
-        this.$store.dispatch('getListBy', {page:++this.page})
+        this.$store.dispatch('getData', {scb:(result)=>{this.data=this.data.concat(result)}});
       }
     },
     computed: {
       list() {
-        this.$nextTick(() => {
+        this.$nextTick(()=> {
           this.status.pullupStatus = 'default'
           this.$refs.scroller.reset()
         })
-        return this.$store.state.base_data.list
+        return this.data
       }
     },
     created(){

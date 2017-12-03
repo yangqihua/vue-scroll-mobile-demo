@@ -37,10 +37,6 @@
       	this.$router.push(link);
       }
     },
-    mounted(){
-      this.$store.dispatch('setDataEmpty')
-
-    }
   }
 </script>
 

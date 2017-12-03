@@ -1,54 +1,51 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import NProgress from 'NProgress'
-import 'NProgress/nprogress.css'
 Vue.use(Vuex)
 
-import {
-  jsonp as ajax,
-  $dom,
-  homelist,
-  showbox,
-} from '../utils/util'
 
-import {
-  io_base,
-  io_home_list,
-} from '../utils/url'
+import data from '../assets/data';
 
-const state = {
-  base_data: {list:[]},
-}
+const state = {}
 
-const mutations = {
-  GET_DATA(state, payload) {
-    state.base_data = Object.assign({}, state.base_data, payload)
-  },
-  SET_EMPTY_DATA(state, payload) {
-    state.base_data.list = [];
-  },
-}
+const mutations = {}
 
 const actions = {
-  getListBy({ commit, state }, param={}) {
-    let page = param.page;
+  getData({commit, state}, param = {}){
+    let page = param.page;  // 实际项目中会用到分页参数 page
     let scb = param.scb;
     let ecb = param.ecb;
-    ajax(io_home_list, { page: page }).then(res => $dom(res.body)).then($ => {
-      let newData = homelist($);
-      let hasNewData = false;
-      if(newData.length>0){
-        hasNewData = true;
-      }
-      commit('GET_DATA', { list: state.base_data.list.concat(newData),hasNewData:hasNewData})
-      scb&&scb(newData);
-    },err=>{
-      ecb&&ecb(err);
+    request().then(res => {
+      scb && scb(res);
+    }, err => {
+      ecb && ecb(err);
     })
-  },
-  setDataEmpty({ commit, state }) {
-    commit('SET_EMPTY_DATA');
   }
+}
+
+const request = () => {
+  return new Promise((res, rej) => {
+    let requestTime = Math.ceil(((0.1 + Math.random()))*1000);
+    console.log("requestTIme:",requestTime);
+    try {
+      setTimeout(() => {
+        let result = getRandomData(data, 10);
+        res(result);
+      }, requestTime)
+    } catch (e) {
+      rej(e);
+    }
+  })
+};
+
+const getRandomData = (arr, count) => {
+  let shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index;
+  while (i-- > min) {
+    index = Math.floor((i + 1) * Math.random());
+    temp = shuffled[index];
+    shuffled[index] = shuffled[i];
+    shuffled[i] = temp;
+  }
+  return shuffled.slice(min);
 }
 
 export default new Vuex.Store({
