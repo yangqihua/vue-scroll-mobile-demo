@@ -7,7 +7,7 @@
       :gitLink="gitLink"
       :webLink="webLink"
     >
-      <c-panel :list="list" style="height: 100%;"></c-panel>
+      <content :list="list" style="height: 100%;"></content>
       <mugen-scroll :handler="upCallback" :should-handle="!loading">
         loading...
       </mugen-scroll>
@@ -17,13 +17,13 @@
 
 <script type="text/ecmascript-6">
   import Details from '../../components/Details.vue'
-  import cPanel from '../../components/Panel'
+  import Content from '../../components/Content'
   import MugenScroll from 'vue-mugen-scroll'
   //创建vue对象
   export default {
     components: {
       'demoDetails': Details,
-      cPanel, MugenScroll
+      Content, MugenScroll
     },
     data() {
       return {

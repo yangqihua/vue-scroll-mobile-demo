@@ -14,14 +14,11 @@
 
 <script type="text/ecmascript-6">
   import Details from '../../components/Details.vue'
-  import cPanel from '../../components/Panel'
+  import Content from '../../components/Content'
   import Scrollload from  '../../assets/scrolload/Scrollload'
   //创建vue对象
   export default {
-    components: {
-      'demoDetails': Details,
-      cPanel
-    },
+    components: {Content},
     data() {
       return {
         header: 'Scrollload',

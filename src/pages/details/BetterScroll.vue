@@ -1,33 +1,24 @@
 <template>
   <div>
-    <demo-details
-      :header="header"
-      :introduction="introduction"
-      :desc="desc"
-      :gitLink="gitLink"
-      :webLink="webLink"
-    >
+    <x-header class="header">{{header}}</x-header>
       <scroll ref="scroll"
               :data="list"
               :listenScrollEnd="true"
               :pullUpLoad="pullUpLoad"
               @pullingUp="onPullingUp">
-        <c-panel :list="list"></c-panel>
+        <list-content style="padding-top: 61px;" :list="list"></list-content>
       </scroll>
-    </demo-details>
   </div>
 </template>
 
 <script>
-  import Details from '../../components/Details.vue'
-  import cPanel from '../../components/Panel'
+  import ListContent from '../../components/Content'
   import Scroll from '../../components/better-scroll/Scroll.vue'
+  import {Scroller, LoadMore, XHeader} from 'vux'
 
   export default {
     components: {
-      Scroll,
-      'demoDetails': Details,
-      cPanel
+      Scroll,XHeader,ListContent
     },
     data () {
       return {
@@ -42,18 +33,18 @@
           txt: {more: '', noMore: '暂无更多数据'}
         },
         page: 0,
+        list:[],
       }
     },
     methods: {
       onPullingUp() {
-        // 更新数据
-        this.$store.dispatch('getListBy', {page:++this.page})
+        this.$store.dispatch('getData', {
+          page:++this.page,
+          scb: (result) => {
+            this.list = this.list.concat(result)
+          }
+        });
       },
-    },
-    computed: {
-      list() {
-        return this.$store.state.base_data.list;
-      }
     },
     mounted(){
       this.onPullingUp();
@@ -62,29 +53,4 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
-  @import "../../style/mixin.less";
-
-  .content_photo {
-    background: #fff;
-  }
-
-  .cc_loadmore {
-    margin: 0 auto 5px !important;
-    span {
-      color: @color_desc;
-    }
-  }
-
-  .rotate {
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-  }
-
-  .pullup-arrow {
-    display: block;
-    transition: all linear 0.2s;
-    -webkit-transition: all linear 0.2s;
-    color: #666;
-    font-size: 25px;
-  }
 </style>

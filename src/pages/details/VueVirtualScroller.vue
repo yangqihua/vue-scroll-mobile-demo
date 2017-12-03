@@ -8,7 +8,7 @@
       :webLink="webLink"
     >
       <scroll :upCallback="upCallback" :emptyDataBtnClick="btnClick" ref="mescroll">
-          <c-panel :list="list"></c-panel>
+          <content :list="list"></content>
       </scroll>
     </demo-details>
   </div>
@@ -16,13 +16,13 @@
 
 <script type="text/ecmascript-6">
   import Details from '../../components/Details.vue'
-  import cPanel from '../../components/Panel'
+  import Content from '../../components/Content'
   import Scroll from '../../components/mescroll/Scroll.vue'
   //创建vue对象
   export default {
     components: {
       'demoDetails': Details,
-      cPanel,Scroll
+      Content,Scroll
     },
     data() {
       return {

@@ -8,7 +8,7 @@
       :webLink="webLink"
     >
       <div class="scroll" v-infinite-scroll="pullup" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
-        <c-panel :list="list"></c-panel>
+        <content :list="list"></content>
       </div>
     </demo-details>
   </div>
@@ -16,13 +16,13 @@
 
 <script>
   import Details from '../../components/Details.vue'
-  import cPanel from '../../components/Panel'
+  import Content from '../../components/Content'
   import infiniteScroll from 'vue-infinite-scroll'
 
   export default {
     components: {
       'demoDetails': Details,
-      cPanel
+      Content
     },
     directives: {infiniteScroll},
     data () {

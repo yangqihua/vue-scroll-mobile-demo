@@ -8,7 +8,7 @@
       :webLink="webLink"
     >
       <scroller :on-infinite="pullup">
-        <c-panel :list="list"></c-panel>
+        <content :list="list"></content>
       </scroller>
     </demo-details>
   </div>
@@ -16,11 +16,11 @@
 
 <script>
   import Details from '../../components/Details.vue'
-  import cPanel from '../../components/Panel'
+  import Content from '../../components/Content'
   export default {
     components: {
       'demoDetails': Details,
-      cPanel,
+      Content,
     },
     data () {
       return {

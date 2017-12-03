@@ -7,7 +7,7 @@
       :gitLink="gitLink"
       :webLink="webLink"
     >
-      <c-panel :list="list"></c-panel>
+      <content :list="list"></content>
       <infinite-loading @infinite="upCallback">
       </infinite-loading>
     </demo-details>
@@ -16,13 +16,13 @@
 
 <script type="text/ecmascript-6">
   import Details from '../../components/Details.vue'
-  import cPanel from '../../components/Panel'
+  import Content from '../../components/Content'
   import InfiniteLoading from 'vue-infinite-loading';
   //创建vue对象
   export default {
     components: {
       'demoDetails': Details,
-      cPanel, InfiniteLoading
+      Content, InfiniteLoading
     },
     data() {
       return {

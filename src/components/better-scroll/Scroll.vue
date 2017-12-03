@@ -145,7 +145,6 @@
           pullUpLoad: this.pullUpLoad,
           startY: this.startY,
           bounce: this.bounce,
-          useTransition:true,
         }
 
         this.scroll = new BScroll(this.$refs.wrapper, options);
@@ -163,7 +162,6 @@
         }
         if (this.listenScrollEnd) {
           this.scroll.on('scrollEnd', (pos) => {
-//          	this.scroll.scrollTo(pos.x,pos.y,0,easing);
             this.$emit('scrollEnd')
           })
         }

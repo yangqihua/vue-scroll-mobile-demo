@@ -49,7 +49,7 @@
 
 <script>
   import Details from '../../components/Details.vue'
-  import cPanel from '../../components/Panel'
+  import cPanel from '../../components/Content'
   import VueRecyclist from 'vue-recyclist'
 
   import Data from '../../assets/recyclist/data'
