@@ -14,7 +14,7 @@
 <script>
   import ListContent from '../../components/Content'
   import Scroll from '../../components/better-scroll/Scroll.vue'
-  import {Scroller, LoadMore, XHeader} from 'vux'
+  import {XHeader} from 'vux'
 
   export default {
     components: {

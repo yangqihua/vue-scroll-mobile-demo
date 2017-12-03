@@ -1,29 +1,19 @@
 <template>
   <div>
-    <demo-details
-      :header="header"
-      :introduction="introduction"
-      :desc="desc"
-      :gitLink="gitLink"
-      :webLink="webLink"
-    >
-      <scroll :upCallback="upCallback" :emptyDataBtnClick="btnClick" ref="mescroll">
-          <content :list="list"></content>
-      </scroll>
-    </demo-details>
+    <x-header class="header">{{header}}</x-header>
+    <scroll class="scroller" :upCallback="upCallback" ref="mescroll">
+      <content-list :list="list"></content-list>
+    </scroll>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-  import Details from '../../components/Details.vue'
-  import Content from '../../components/Content'
+  import {XHeader} from 'vux'
+  import ContentList from '../../components/Content'
   import Scroll from '../../components/mescroll/Scroll.vue'
   //创建vue对象
   export default {
-    components: {
-      'demoDetails': Details,
-      Content,Scroll
-    },
+    components: {ContentList,XHeader, Scroll},
     data() {
       return {
         header: 'MeScroll',
@@ -31,32 +21,25 @@
         desc: '这里是关于MeScroll插件的相关内容说明',
         gitLink: 'https://github.com/airyland/vux',
         webLink: 'https://vux.li/',
+
+        list:[],
       }
     },
     methods: {
       upCallback: function (page) {
-        let self = this;
-      	let params = {
-      		page:page.num,
-          scb:(curPageData)=>{
-      			console.log('sss')
-            self.$refs.mescroll.endSuccess(curPageData.length);
+
+        this.$store.dispatch('getData', {
+          page: page.num,
+          scb: (result) => {
+            this.$refs.mescroll.endSuccess(result.length);
+            this.list = this.list.concat(result)
           },
           ecb:(err)=>{
-            this.$vux.toast.show({text: err,type:'warn'})
-            self.$refs.mescroll.endErr();
+            this.$vux.toast.show({text: err, type: 'warn'})
+            this.$refs.mescroll.endErr();
           }
-        };
-        this.$store.dispatch('getListBy', params)
+        });
       },
-      btnClick() {
-        alert("点击了去逛逛按钮");
-      }
-    },
-    computed: {
-      list() {
-        return this.$store.state.base_data.list
-      }
     },
   };
 </script>
