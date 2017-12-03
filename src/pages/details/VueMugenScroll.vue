@@ -1,30 +1,22 @@
 <template>
   <div>
-    <demo-details
-      :header="header"
-      :introduction="introduction"
-      :desc="desc"
-      :gitLink="gitLink"
-      :webLink="webLink"
-    >
-      <content :list="list" style="height: 100%;"></content>
+    <x-header class="header">{{header}}</x-header>
+    <div class="scroller">
+      <list-content :list="list" style="height: 100%;"></list-content>
       <mugen-scroll :handler="upCallback" :should-handle="!loading">
-        loading...
+        自定义loading...
       </mugen-scroll>
-    </demo-details>
+    </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-  import Details from '../../components/Details.vue'
-  import Content from '../../components/Content'
+  import {XHeader} from 'vux'
+  import ListContent from '../../components/Content'
   import MugenScroll from 'vue-mugen-scroll'
   //创建vue对象
   export default {
-    components: {
-      'demoDetails': Details,
-      Content, MugenScroll
-    },
+    components: {XHeader, ListContent, MugenScroll},
     data() {
       return {
         header: 'VueMugenScroll',
@@ -35,27 +27,24 @@
 
         loading: false,
         page: 0,
+        list: []
       }
     },
     methods: {
       upCallback: function (page) {
         this.loading = true
-        let params = {
+        this.$store.dispatch('getData', {
           page: ++this.page,
-          scb: (curPageData) => {
+          scb: (result) => {
             this.loading = false
+            this.list = this.list.concat(result)
           },
           ecb: (err) => {
+            this.$vux.toast.show({text: err, type: 'warn'})
             this.loading = false
           }
-        };
-        this.$store.dispatch('getListBy', params)
+        });
       },
-    },
-    computed: {
-      list() {
-        return this.$store.state.base_data.list
-      }
     },
   };
 </script>

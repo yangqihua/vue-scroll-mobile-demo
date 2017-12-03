@@ -1,24 +1,19 @@
 <template>
-  <demo-details
-    :header="header"
-    :introduction="introduction"
-    :desc="desc"
-    :gitLink="gitLink"
-    :webLink="webLink"
-  >
-    <div class="scrollload-container">
-      <c-panel :list="list" class="scrollload-content"></c-panel>
+  <div>
+    <x-header class="header">{{header}}</x-header>
+    <div class="scrollload-container scroller">
+      <list-content :list="list" class="scrollload-content"></list-content>
     </div>
-  </demo-details>
+  </div>
 </template>
 
 <script type="text/ecmascript-6">
-  import Details from '../../components/Details.vue'
-  import Content from '../../components/Content'
+  import {XHeader} from 'vux'
+  import ListContent from '../../components/Content'
   import Scrollload from  '../../assets/scrolload/Scrollload'
   //创建vue对象
   export default {
-    components: {Content},
+    components: {ListContent, XHeader},
     data() {
       return {
         header: 'Scrollload',
@@ -29,6 +24,7 @@
 
         scroll: null,
         page: 0,
+        list: [],
       }
     },
     mounted(){
@@ -41,24 +37,18 @@
     },
     methods: {
       upCallback: function (scroll) {
-        let params = {
+        this.$store.dispatch('getData', {
           page: ++this.page,
-          scb: (curPageData) => {
+          scb: (result) => {
             console.log("success")
-            this.data = this.$store.state.base_data.list;
+            this.list = this.list.concat(result)
             scroll.unLock();
           },
           ecb: (err) => {
             scroll.throwException();
           }
-        };
-        this.$store.dispatch('getListBy', params)
+        });
       },
-    },
-    computed: {
-      list() {
-        return this.$store.state.base_data.list
-      }
     },
     destroyed(){
       this.scroll.destroy();

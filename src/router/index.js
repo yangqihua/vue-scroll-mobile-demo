@@ -6,8 +6,6 @@ import BetterScroll from '../pages/details/BetterScroll'
 import MeScroll from '../pages/details/MeScroll'
 import VueInfiniteScroll from '../pages/details/VueInfiniteScroll'
 import VueScroll from '../pages/details/VueScroll'
-import VueRecyclist from '../pages/details/VueRecyclist'
-import VueVirtualScroller from '../pages/details/VueVirtualScroller.vue'
 import VueInfiniteLoading from '../pages/details/VueInfiniteLoading.vue'
 import VueMugenScroll from '../pages/details/VueMugenScroll.vue'
 import Scrollload from '../pages/details/Scrollload.vue'
@@ -45,16 +43,6 @@ export default new Router({
       path: '/vue-scroll',
       name: 'VueScroll',
       component: VueScroll
-    },
-    {
-      path: '/vue-recyclist',
-      name: 'VueRecyclist',
-      component: VueRecyclist
-    },
-    {
-      path: '/vue-virtual-scroller',
-      name: 'VueVirtualScroller',
-      component: VueVirtualScroller
     },
     {
       path: '/vue-infinite-loading',

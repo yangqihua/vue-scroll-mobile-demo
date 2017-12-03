@@ -34,7 +34,6 @@
         this.$store.dispatch('getData', {
           page: ++this.page,
           scb: (result) => {
-          	console.log("Ok");
             this.busy = false;
             this.list = this.list.concat(result)
           },

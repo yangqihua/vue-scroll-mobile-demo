@@ -1,29 +1,21 @@
 <template>
   <div>
-    <demo-details
-      :header="header"
-      :introduction="introduction"
-      :desc="desc"
-      :gitLink="gitLink"
-      :webLink="webLink"
-    >
-      <content :list="list"></content>
+    <x-header class="header">{{header}}</x-header>
+    <div class="scroller">
+      <list-content :list="list"></list-content>
       <infinite-loading @infinite="upCallback">
       </infinite-loading>
-    </demo-details>
+    </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-  import Details from '../../components/Details.vue'
-  import Content from '../../components/Content'
+  import {XHeader} from 'vux'
+  import ListContent from '../../components/Content'
   import InfiniteLoading from 'vue-infinite-loading';
   //创建vue对象
   export default {
-    components: {
-      'demoDetails': Details,
-      Content, InfiniteLoading
-    },
+    components: {ListContent, InfiniteLoading,XHeader},
     data() {
       return {
         header: 'vue-infinite-loading',
@@ -32,28 +24,23 @@
         gitLink: 'https://github.com/airyland/vux',
         webLink: 'https://peachscript.github.io/vue-infinite-loading/',
 
-        page:0
+        page:0,
+        list:[],
       }
     },
     methods: {
-      upCallback: function (state) {
-        let self = this;
-        let params = {
+      upCallback(state) {
+        this.$store.dispatch('getData', {
           page: ++this.page,
-          scb: (curPageData) => {
+          scb: (result) => {
+            this.list = this.list.concat(result)
             state.loaded();
           },
           ecb: (err) => {
             state.loaded();
           }
-        };
-        this.$store.dispatch('getListBy', params)
+        });
       },
-    },
-    computed: {
-      list() {
-        return this.$store.state.base_data.list
-      }
     },
   };
 </script>

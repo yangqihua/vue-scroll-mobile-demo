@@ -21,11 +21,9 @@
       	demoList:[
           {title:'Vux','link':'/vux'},
           {title:'Better-scroll','link':'/better-scroll'},
-          {title:'MeScroll','link':'/mescroll'},
           {title:'Vue Scroll','link':'/vue-scroll'},
-          {title:'Vue-recyclist','link':'/vue-recyclist'},
+          {title:'MeScroll','link':'/mescroll'},
           {title:'Vue-infinite-scroll','link':'/vue-infinite-scroll'},
-          {title:'Vue-virtual-scroller','link':'/vue-virtual-scroller'},
           {title:'Vue-infinite-loading','link':'/vue-infinite-loading'},
           {title:'Vue-mugen-scroll','link':'/vue-mugen-scroll'},
           {title:'Scrollload','link':'/scrollload'},
