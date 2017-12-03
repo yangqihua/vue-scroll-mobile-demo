@@ -1,27 +1,17 @@
 <template>
   <div>
-    <demo-details
-      :header="header"
-      :introduction="introduction"
-      :desc="desc"
-      :gitLink="gitLink"
-      :webLink="webLink"
-    >
+    <x-header class="header">{{header}}</x-header>
       <scroller :on-infinite="pullup">
-        <content :list="list"></content>
+        <list-content style="padding-top: 61px;" :list="list"></list-content>
       </scroller>
-    </demo-details>
   </div>
 </template>
 
 <script>
-  import Details from '../../components/Details.vue'
-  import Content from '../../components/Content'
+  import {XHeader} from 'vux'
+  import ListContent from '../../components/Content'
   export default {
-    components: {
-      'demoDetails': Details,
-      Content,
-    },
+    components: {ListContent,XHeader},
     data () {
       return {
         header: 'Vue Scroller',
@@ -31,24 +21,19 @@
         webLink: 'https://wangdahoo.github.io/vue-scroller',
 
         page: 0,
+        list:[],
       }
     },
     methods: {
       pullup(done){
-        this.$store.dispatch('getListBy', {
-          page: ++this.page,
-          scb:(curPageData)=>{
-          	done();
+        this.$store.dispatch('getData', {
+          page:++this.page,
+          scb: (result) => {
+            this.list = this.list.concat(result)
+            done();
           }
         });
       }
-    },
-    computed: {
-      list() {
-        return this.$store.state.base_data.list
-      }
-    },
-    created(){
     },
   }
 </script>
