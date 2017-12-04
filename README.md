@@ -3,7 +3,7 @@
 ---
 
 ## 1.扫码快速体验（使用手机浏览器打开）
-<img src="https://gitee.com/yangqihua/vue-scroll-mobile-demo/blob/master/dist/screenshot/%E4%BA%8C%E7%BB%B4%E7%A0%81.png" width="300" alt="二维码" align=center />
+<img src="https://gitee.com/yangqihua/vue-scroll-mobile-demo/blob/master/dist/screenshot/qr.png" width="300" alt="二维码" align=center />
 
 ## 2.安装与运行
 ```angular2html
@@ -17,9 +17,9 @@
 ```
 
 ## 4.演示部分界面截图（4种，其他插件效果安装体验）
-<img src="http://oss.vzan.cc/image/jpg/2016/9/17/1603558eafbbea90b7408986afdaf4f382782f.jpg" width="380"/>    <img src="http://oss.vzan.cc/image/jpg/2016/9/17/1603552a675d2eb56345f2945ab0d149618b1e.jpg" width="380"/>
+<img src="https://gitee.com/yangqihua/vue-scroll-mobile-demo/blob/master/dist/screenshot/better-scroll.gif" width="380"/>    <img src="https://gitee.com/yangqihua/vue-scroll-mobile-demo/blob/master/dist/screenshot/mescroll.gif" width="380"/>
 
-<img src="http://oss.vzan.cc/image/jpg/2016/9/17/1603558618432dfe684017b4520a63febc0929.jpg" width="380"/>    <img src="http://oss.vzan.cc/image/jpg/2016/9/17/16035616d0318100874433a2e25ea5dfe0c1c3.jpg" width="380"/>
+<img src="https://gitee.com/yangqihua/vue-scroll-mobile-demo/blob/master/dist/screenshot/vue-scroll.gif" width="380"/>    <img src="https://gitee.com/yangqihua/vue-scroll-mobile-demo/blob/master/dist/screenshot/scrollload.gif" width="380"/>
 
 ## 5.插件比较
 <table border="1" cellspacing="0">
