@@ -72,12 +72,12 @@
 </table>
 
 ## 6.总结
-- scroll view 插件非常多，但实现方式无非是两种
-  - 1：自己使用 css3 transform 来实现滚动动画，可以很好的实现回弹效果，但很难掌控，所以会造成滑动不自然，上述插件vux、better-scroll、vue-scroller都是使用的该方案
-  - 2：使用原生div效果（overflow-y:auto）来实现滑动，滑动效果会较为自然，但安卓上无回弹效果，且滑动事件易于iOS默认滑动事件冲突，上述插件其余5种使用的该方案。
+- 1.scroll view 插件非常多，但实现方式无非是两种
+  - 1-1.自己使用 css3 transform 来实现滚动动画，可以很好的实现回弹效果，但很难掌控，所以会造成滑动不自然，上述插件vux、better-scroll、vue-scroller都是使用的该方案
+  - 1-2.使用原生div效果（overflow-y:auto）来实现滑动，滑动效果会较为自然，但安卓上无回弹效果，且滑动事件易于iOS默认滑动事件冲突，上述插件其余5种使用的该方案。
 
-- better-scroll 官方demo相对新手来说较为复杂，vue-scroll-mobile-demo 中对 better-scroll 进行了使用上的封装（基于vue）
+- 2.better-scroll 官方demo相对新手来说较为复杂，vue-scroll-mobile-demo 中对 better-scroll 进行了使用上的封装（基于vue）
 
-- mescroll 在 vue 中使用存在一些弊端（如组件在deactivated时未注销滑动事件，在deactivated时未销毁回到顶部图片），vue-scroll-mobile-demo 对 mescroll 的源代码进行了相应的完善。
+- 3.mescroll 在 vue 中使用存在一些弊端（如组件在deactivated时未注销滑动事件，在deactivated时未销毁回到顶部图片），vue-scroll-mobile-demo 对 mescroll 的源代码进行了相应的完善。
 
-- 个人观点：项目中 scroll view 为文字列表且滚动加载数据较少时，可使用 better-scroll，毕竟滴滴也在用，使用者很多。项目中 scroll view 为图文列表时，且需要无限加载数据时使用 mescroll，可参照官方示例。
+- 4.个人观点：项目中 scroll view 为文字列表且滚动加载数据较少时，可使用 better-scroll，毕竟滴滴也在用，使用者很多。项目中 scroll view 为图文列表时，且需要无限加载数据时使用 mescroll，可参照官方示例。
