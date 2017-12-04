@@ -17,11 +17,6 @@
     data() {
       return {
         header: 'Scrollload',
-        introduction: '这里是关于Scrollload插件的相关内容介绍',
-        desc: '这里是关于Scrollload插件的相关内容说明',
-        gitLink: 'https://github.com/fa-ge/Scrollload/',
-        webLink: 'https://github.com/fa-ge/Scrollload/blob/master/README.md',
-
         scroll: null,
         page: 0,
         list: [],

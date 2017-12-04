@@ -20,11 +20,6 @@
     data() {
       return {
         header: 'VueMugenScroll',
-        introduction: '这里是关于VueMugenScroll插件的相关内容介绍',
-        desc: '这里是关于VueMugenScroll插件的相关内容说明',
-        gitLink: 'https://github.com/airyland/vux',
-        webLink: 'https://vux.li/',
-
         loading: false,
         page: 0,
         list: []

@@ -23,11 +23,6 @@
     data () {
       return {
         header: 'Better-scroll',
-        introduction: '这里是关于Better-scroll插件的相关内容介绍',
-        desc: '这里是关于Better-scroll插件的相关内容说明',
-        gitLink: 'https://github.com/ustbhuangyi/better-scroll',
-        webLink: 'https://ustbhuangyi.github.io/better-scroll/#/',
-
         pullUpLoad: {
           threshold: 10,
           txt: {more: '', noMore: '暂无更多数据'}

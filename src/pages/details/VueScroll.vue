@@ -15,11 +15,6 @@
     data () {
       return {
         header: 'Vue Scroller',
-        introduction: '这里是关于Vue Scroller插件的相关内容介绍',
-        desc: '这里是关于Vue Scroller插件的相关内容说明',
-        gitLink: 'https://github.com/wangdahoo/vue-scroller',
-        webLink: 'https://wangdahoo.github.io/vue-scroller',
-
         page: 0,
         list:[],
       }

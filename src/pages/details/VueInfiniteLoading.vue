@@ -19,11 +19,6 @@
     data() {
       return {
         header: 'vue-infinite-loading',
-        introduction: '这里是关于vue-infinite-loading插件的相关内容介绍',
-        desc: '这里是关于vue-infinite-loading插件的相关内容说明',
-        gitLink: 'https://github.com/airyland/vux',
-        webLink: 'https://peachscript.github.io/vue-infinite-loading/',
-
         page:0,
         list:[],
       }

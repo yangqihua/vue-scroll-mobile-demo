@@ -18,11 +18,6 @@
     data () {
       return {
         header: 'vue-infinite-scroll',
-        introduction: '这里是关于vue-infinite-scroll插件的相关内容介绍',
-        desc: '目前我这里使用 vue-infinite-scroll 来加载列表，总是不能正常滑动，不知道是插件原因还是我自己代码原因。求大神找bug并pr',
-        gitLink: 'https://github.com/ElemeFE/vue-infinite-scroll',
-        webLink: 'https://github.com/ElemeFE/vue-infinite-scroll',
-
         page: 0,
         list: [],
         busy: false
