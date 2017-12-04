@@ -17,15 +17,15 @@
 ```
 
 ## 4.演示部分界面截图（4种，其他插件效果安装体验）
-<img src="http://118.31.20.214/scroll-demo/screenshot/better-scroll.gif" width="380"/>    <img src="http://118.31.20.214/scroll-demo/screenshot/mescroll.gif" width="380"/>
+<img src="http://118.31.20.214/scroll-demo/screenshot/better-scroll.gif" alt="图一加载失败" width="380"/>    <img src="http://118.31.20.214/scroll-demo/screenshot/mescroll.gif" alt="图二加载失败" width="380"/>
 
-<img src="http://118.31.20.214/scroll-demo/screenshot/vue-scroll.gif" width="380"/>    <img src="http://118.31.20.214/scroll-demo/screenshot/scrollload.gif" width="380"/>
+<img src="http://118.31.20.214/scroll-demo/screenshot/vue-scroll.gif" alt="图三加载失败" width="380"/>    <img src="http://118.31.20.214/scroll-demo/screenshot/scrollload.gif" alt="图四加载失败" width="380"/>
 
 ## 5.插件比较
 <table border="1" cellspacing="0">
 	<tr align="center"><td colspan="3"><b>scroll view 8款插件比较 </b></td></tr>
 	<tr align="center">
-		<td>插件名称</td>
+		<td style="width:40px;">插件名称</td>
 		<td>GitHub</td>
 		<td>说明</td>
 	</tr>
