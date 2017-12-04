@@ -17,7 +17,7 @@
 ```
 
 ## 4.演示部分界面截图（4种，其他插件效果安装体验）
-<img src="http://118.31.20.214/scroll-demo/screenshot/better-scroll.gif" alt="图一加载失败" width="380"/>    <img src="http://118.31.20.214/scroll-demo/screenshot/mescroll.gif" alt="图二加载失败" width="380"/>
+<img src="https://github.com/yangqihua/vue-scroll-mobile-demo/blob/master/dist/screenshot/better-scroll.gif" alt="图一加载失败" width="380"/>    <img src="http://118.31.20.214/scroll-demo/screenshot/mescroll.gif" alt="图二加载失败" width="380"/>
 
 <img src="http://118.31.20.214/scroll-demo/screenshot/vue-scroll.gif" alt="图三加载失败" width="380"/>    <img src="http://118.31.20.214/scroll-demo/screenshot/scrollload.gif" alt="图四加载失败" width="380"/>
 
