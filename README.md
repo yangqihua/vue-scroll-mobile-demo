@@ -5,13 +5,13 @@
 ## 1.扫码快速体验（使用手机浏览器打开）
 <img src="http://i.pengxun.cn/thumb/articles/20160809/131152257267080082@200x200.jpg" width="300" alt="公众号" align=center />
 
-# 2.安装与运行
+## 2.安装与运行
 ```angular2html
   npm install
   npm run dev
 ```
 
-# 3.项目打包
+## 3.项目打包
 ```angular2html
   npm run build
 ```
