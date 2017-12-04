@@ -27,7 +27,6 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
-  @import "../style/mixin.less";
 
   .cc_panel_wapper {
     margin-left: -15px;
@@ -53,7 +52,7 @@
         margin-bottom: 5px;
         width: 100%;
         padding-top: (188/250)*100%;
-        background: @base_ground;
+        background: #f9f8fb;
         border-radius: 3px;
 
         .image {
@@ -79,7 +78,7 @@
           -webkit-line-clamp: 2;
           overflow: hidden;
 
-          color: @color_tit;
+          color: #2b333b;
           font-size: 12px;
           line-height: 1.6;
           font-weight: 400;
@@ -88,7 +87,7 @@
           position: absolute;
           left: 15px;
           bottom: 15px;
-          color: @color_desc;
+          color: #b7bbbf;
           font-size: 12px;
           line-height: 1;
           i {

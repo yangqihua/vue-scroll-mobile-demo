@@ -17,32 +17,4 @@
 <div id="app-box"></div>
 <%=htmlWebpackPlugin.files.webpackManifest%>
 </body>
-
-<script type="application/javascript">
-  /**
-   * 禁止浏览器下拉回弹
-   */
-  let u = navigator.userAgent;
-//  console.log('userAgent:', u)
-  let isIphone = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-//  console.log('isIphone:', isIphone)
-//  if (isIphone) {
-//    (function stopDrop() {
-//      let lastY;//最后一次y坐标点
-//      let body = document.querySelector('body');
-//      body.addEventListener('touchstart', function (event) {
-//        lastY = event.changedTouches[0].clientY;//点击屏幕时记录最后一次Y度坐标。
-//      });
-//      body.addEventListener('touchmove', function (event) {
-//        let y = event.changedTouches[0].clientY;
-//        let st = this.scrollTop; //滚动条高度
-//        if (y >= lastY && st <= 10) {//如果滚动条高度小于0，可以理解为到顶了，且是下拉情况下，阻止touchmove事件。
-//          event.preventDefault();
-//        }
-//        lastY = y;
-//      });
-//    })();
-//  }
-</script>
-
 </html>

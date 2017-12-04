@@ -9,7 +9,6 @@ import store from './store'
 import './style/index.less'
 import  { ToastPlugin } from 'vux'
 Vue.use(ToastPlugin)
-require('es6-promise').polyfill()
 
 Vue.use(VueLazyload)
 FastClick.attach(document.body)
