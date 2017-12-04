@@ -1,7 +1,8 @@
 <template>
   <div>
     <x-header class="header">{{header}}</x-header>
-    <scroll class="scroller" :upCallback="upCallback" ref="mescroll">
+    <scroll class="scroller" :upCallback="upCallback" ref="mescroll" warpId="index_scroll"
+            id="index_scroll">
       <content-list :list="list"></content-list>
     </scroll>
   </div>

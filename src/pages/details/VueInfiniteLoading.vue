@@ -46,5 +46,4 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
-  @import '../../../node_modules/mescroll.js/mescroll.min.css';
 </style>
