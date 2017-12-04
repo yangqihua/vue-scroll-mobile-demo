@@ -3,7 +3,7 @@
 ---
 
 ## 1.扫码快速体验（使用手机浏览器打开）
-<img src="http://i.pengxun.cn/thumb/articles/20160809/131152257267080082@200x200.jpg" width="300" alt="公众号" align=center />
+<img src="https://gitee.com/yangqihua/vue-scroll-mobile-demo/blob/master/dist/screenshot/%E4%BA%8C%E7%BB%B4%E7%A0%81.png" width="300" alt="二维码" align=center />
 
 ## 2.安装与运行
 ```angular2html
