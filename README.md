@@ -25,7 +25,7 @@
 <table border="1" cellspacing="0">
 	<tr align="center"><td colspan="3"><b>scroll view 8款插件比较 </b></td></tr>
 	<tr align="center">
-		<td style="width:40px;">插件名称</td>
+		<td>插件名称</td>
 		<td>GitHub</td>
 		<td>说明</td>
 	</tr>
